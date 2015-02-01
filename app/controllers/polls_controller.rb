@@ -1,5 +1,7 @@
 class PollsController < ApplicationController
 
+  before_action :ensure_logged_in, only: [:new, :create]
+
   def index
     @polls = Poll.all
   end
@@ -20,6 +22,8 @@ class PollsController < ApplicationController
   private
 
   def poll_params
-    params.require(:poll).permit(:question)
+    params.require(:poll)
+          .permit(:question, choices: [:text])
+          .merge(created_by: current_user)
   end
 end
