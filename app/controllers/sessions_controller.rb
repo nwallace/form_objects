@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @session = Session.new(session, session_params)
     if @session.valid?
       @session.authenticate!
-      redirect_to root_url, notice: "Welcome, #{@session.username}"
+      redirect_to root_url, notice: "Welcome, #{@session.username}."
     else
       render :new
     end

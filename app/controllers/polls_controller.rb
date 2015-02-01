@@ -19,11 +19,16 @@ class PollsController < ApplicationController
     end
   end
 
+  def destroy
+    Poll.find(params[:id]).destroy!
+    redirect_to polls_path, notice: "Poll deleted successfully."
+  end
+
   private
 
   def poll_params
     params.require(:poll)
-          .permit(:question, choices: [:text])
+          .permit(:question, choices_attributes: [:text])
           .merge(created_by: current_user)
   end
 end

@@ -8,9 +8,9 @@ module BootstrapHelper
       next if message.blank?
 
       type = type.to_sym
-      type = :success if type == :notice
-      type = :danger  if type == :alert
-      type = :danger  if type == :error
+      type = :info   if type == :notice
+      type = :danger if type == :alert
+      type = :danger if type == :error
       next unless ALERT_TYPES.include?(type)
 
       Array(message).each do |msg|

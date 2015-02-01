@@ -1,5 +1,8 @@
 <div class="poll">
-  <h4><%= poll.question %></h4>
+  <%= link_to "&times;".html_safe, poll, method: :delete, class: "btn btn-danger pull-right" %>
+  <h4>
+    <%= poll.question %>
+  </h4>
 
   <%= render poll.choices %>
 </div>
