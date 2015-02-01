@@ -1,0 +1,3 @@
+<% if model.errors.any? %>
+  <%= bootstrap_alert :danger, model.errors.full_messages.join("<br>") %>
+<% end %>
