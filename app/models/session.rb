@@ -7,6 +7,10 @@ class Session
   validates :password, presence: true
   validate :correct_authentication
 
+  def self.bypass_login(session, user)
+    session[:user_id] = user.id
+  end
+
   def initialize(session, attributes={})
     self.session = session
     super(attributes)
