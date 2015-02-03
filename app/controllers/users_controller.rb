@@ -10,7 +10,6 @@ class UsersController < ApplicationController
       Session.bypass_login(session, @user)
       redirect_to root_path, notice: "Welcome, #{@user.username}!"
     else
-      puts @user.errors.messages
       render :new
     end
   end
