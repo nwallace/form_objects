@@ -28,7 +28,7 @@ class PollsController < ApplicationController
 
   def poll_params
     params.require(:poll)
-          .permit(:question, choices_attributes: [:text])
+          .permit(:question, choices_attributes: [:text, :_destroy])
           .merge(created_by: current_user)
   end
 end

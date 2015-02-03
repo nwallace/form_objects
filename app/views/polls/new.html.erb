@@ -3,6 +3,7 @@
 <div class="row">
   <div class="col-xs-6">
     <%= form_for @poll do |f| %>
+      <%= render "shared/errors", model: f.object %>
       <div class="form-group">
         <%= f.label :question %>
         <%= f.text_field :question, placeholder: "Enter your question...", class: "form-control" %>
