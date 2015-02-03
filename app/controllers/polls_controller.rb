@@ -7,7 +7,7 @@ class PollsController < ApplicationController
   end
 
   def new
-    @poll = Poll.new
+    @poll = Poll.new(choices: [Choice.new, Choice.new])
   end
 
   def create
