@@ -1,4 +1,6 @@
-user = User.create!(username: "Nathan", password: "password")
+user = User.create!(username: "Nathan",
+                    password: "password",
+                    accepts_terms_of_use: true)
 
 Poll.create!(
     question: "What's your favorite programming language?",
