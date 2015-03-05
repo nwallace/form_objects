@@ -8,10 +8,14 @@ class Poll < ActiveRecord::Base
   validates :question, presence: true
   validate :at_least_two_choices
 
+  def number_of_choices
+    choices.reject(&:destroyed?).count
+  end
+
   private
 
   def at_least_two_choices
-    unless choices.reject(&:destroyed?).count > 1
+    unless number_of_choices > 1
       errors.add(:base, "Must have at least two choices")
     end
   end

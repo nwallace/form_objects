@@ -20,6 +20,9 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_record_block_matchers (0.1.1)
+      activerecord (>= 3.2.0)
+      rspec-expectations (>= 3.0.0)
     activejob (4.2.0)
       activesupport (= 4.2.0)
       globalid (>= 0.3.0)
@@ -46,6 +49,7 @@ GEM
       sass (>= 3.2.19)
     builder (3.2.2)
     coderay (1.1.0)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
     globalid (0.3.0)
@@ -110,6 +114,23 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    rspec-core (3.2.1)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-mocks (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-rails (3.2.1)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.2)
     sass (3.4.11)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -141,6 +162,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_record_block_matchers
   bcrypt
   bootstrap-sass
   jquery-rails
@@ -149,6 +171,7 @@ DEPENDENCIES
   pry-rails
   rails (~> 4.2.0)
   rails_12factor
+  rspec-rails
   sass-rails
   sqlite3
   uglifier
