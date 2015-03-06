@@ -12,6 +12,8 @@ gem "jquery-rails"
 gem "sass-rails"
 gem "bootstrap-sass"
 
+gem "awesome_form", path: "~/projects/awesome_form"
+
 group :production do
   gem "rails_12factor"
   gem "pg"

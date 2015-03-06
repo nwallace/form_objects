@@ -1,3 +1,9 @@
+PATH
+  remote: ~/projects/awesome_form
+  specs:
+    awesome_form (0.0.1)
+      activemodel (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -163,6 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_record_block_matchers
+  awesome_form!
   bcrypt
   bootstrap-sass
   jquery-rails
